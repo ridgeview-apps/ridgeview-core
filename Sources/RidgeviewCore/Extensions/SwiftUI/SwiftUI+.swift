@@ -16,14 +16,6 @@ extension Binding {
 
 extension View {
     
-    public func embeddedInNavigationView() -> some View {
-        NavigationView { self }
-    }
-    
-    public func eraseToAnyView() -> AnyView {
-        AnyView(self)
-    }
-    
     public func onSceneDidBecomeActive(action: @escaping () -> ()) -> some View {
         modifier(OnChangeOfScenePhaseModifier(to: .active, action: action))
     }
