@@ -6,7 +6,7 @@ import Foundation
 
 public struct Device {
     
-    static let modelName: String = {
+    public static let modelName: String = {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
